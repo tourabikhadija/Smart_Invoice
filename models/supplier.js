@@ -2,26 +2,33 @@ import mongoose from 'mongoose';
 
 const suppliershema = new mongoose.Schema({
     name : {
-        type: string,
+        type: String,
         required: true,
     },
 
     email: {
-        type:string,
-        requied: true,
+        type:String,
+        required: true,
         unique: true,
     },
 
     phone: {
-     type: string,
-     requeid: true,
+     type: String,
+     required: true,
      unique: true,
     },
 
-    adress: {
-        type: string,
-        requeid: true,
-    }
+    address: {
+        type: String,
+        required: true,
+    },
+
+  client: {
+  type: mongoose.Schema.Types.ObjectId,
+  ref: "User",
+  required: true,
+}
+
 });
 
 const supplier = mongoose.model("Supplier", suppliershema);
