@@ -4,8 +4,9 @@ dotenv.config();
 import mongoose from "mongoose";
 
 import userRoutes from "./routes/userRoutes.js";
-import supplierRoutes from "./routes/supplierRoutes.js";
+import FournisseurRoutes from "./routes/FournisseurRoutes.js";
 import adminRoutes from "./routes/adminRoutes.js";
+import factureRoutes from "./routes/factureRoutes.js";
 
 
 
@@ -13,8 +14,10 @@ const app = express();
 app.use(express.json());
 
 app.use("/api/users", userRoutes);
-app.use("/api/suppliers", supplierRoutes);
+app.use("/api/Fournisseur", FournisseurRoutes);
 app.use("/api/admin", adminRoutes);
+app.use("/api/facture", factureRoutes);
+
 
 
 

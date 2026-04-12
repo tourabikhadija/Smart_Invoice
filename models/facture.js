@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const invoiceSchema = new mongoose.Schema({
+const factureSchema = new mongoose.Schema({
     amount: {
         type: Number,
         required : true,
@@ -19,17 +19,17 @@ const invoiceSchema = new mongoose.Schema({
         type: String,
         required: false,
     },
-       supplierId: { // الربط مع المورد
+       fournisseur: { // الربط مع المورد
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Supplier',
+        ref: 'Fournisseur',
         required: true,
     },
-    userId: { // الربط مع العميل (User)
+        client: { // الربط مع العميل (User)
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
         required: true,
     }
 });
 
- const invoice = mongoose.model("Invoice", invoiceSchema);
- export default invoice;
+ const Facture = mongoose.model("Facture", factureSchema);
+ export default Facture;

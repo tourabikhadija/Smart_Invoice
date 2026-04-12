@@ -21,9 +21,9 @@ const paymentSchema = new mongoose.Schema({
         requied: false,
     },
     
-    invoiceId: {
+    facture: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Invoice",
+        ref: "facture",
         requied: true,
     }
 });

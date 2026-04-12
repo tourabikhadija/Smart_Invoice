@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const suppliershema = new mongoose.Schema({
+const fournisseurShema = new mongoose.Schema({
     name : {
         type: String,
         required: true,
@@ -31,5 +31,5 @@ const suppliershema = new mongoose.Schema({
 
 });
 
-const supplier = mongoose.model("Supplier", suppliershema);
-export default supplier;
+const Fournisseur = mongoose.model("Fournisseur", fournisseurShema);
+export default Fournisseur;
